@@ -21,7 +21,8 @@ set $term foot
 set $menu rofi -show combi
 
 font pango:monospace 8
-# env XDG_MENU_PREFIX,plasma-
+
+#exec "XDG_MENU_PREFIX=plasma- systemctl --user import-environment"
 
 exec nm-applet
 #exec kwalletd6
@@ -33,7 +34,7 @@ exec waybar -c $HOME/.config/waybar/config-sway.jsonc
 xwayland disable
 
 workspace number 2; exec foot
-workspace number 3; exec dolphin
+#workspace number 3; exec dolphin
 #workspace number 4; exec google-chrome-stable --password-store=kwallet6
 workspace number 9; exec foot btop
 workspace number 1
