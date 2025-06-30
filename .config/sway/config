@@ -83,13 +83,13 @@ input "type:touchpad" {
 # Basics:
 #
     # Start a terminal
-    bindsym $mod+Return exec $term
+    bindsym $mod+t exec $term
 
     # Kill focused window
-    bindsym $mod+Shift+q kill
+    bindsym $mod+q kill
 
     # Start your launcher
-    bindsym $mod+d exec $menu
+    bindsym $mod+r exec $menu
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -103,7 +103,7 @@ input "type:touchpad" {
 
     # Exit sway (logs you out of your Wayland session)
     # bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
-    bindsym $mod+Shift+e exec 'swaymsg exit'
+    bindsym $mod+e exec 'swaymsg exit'
 #
 #
 
@@ -167,9 +167,9 @@ input "type:touchpad" {
     bindsym $mod+v splitv
 
     # Switch the current container between different layout styles
-    bindsym $mod+s layout stacking
+    bindsym $mod+o layout stacking
     bindsym $mod+w layout tabbed
-    bindsym $mod+e layout toggle split
+    bindsym $mod+p layout toggle split
 
     # Make the current focus fullscreen
     bindsym $mod+f fullscreen
@@ -217,7 +217,7 @@ mode "resize" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym $mod+r mode "resize"
+bindsym $mod+y mode "resize"
 #
 # Utilities:
 #
@@ -235,11 +235,11 @@ bindsym $mod+r mode "resize"
 #
 #customkeys
 #
-   bindsym $mod+CTRL+g exec google-chrome-stable --password-store=kwallet6
-   bindsym $mod+CTRL+c exec chiaki
-   bindsym $mod+CTRL+f exec firefox
-   bindsym $mod+CTRL+z exec zen-twilight
-#
+   bindsym $mod+g exec google-chrome-stable --password-store=kwallet6
+   bindsym $mod+c exec chiaki
+   bindsym $mod+x exec firefox
+   bindsym $mod+z exec zen-twilight
+   bindsym $mod+d exec dolphin
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.
