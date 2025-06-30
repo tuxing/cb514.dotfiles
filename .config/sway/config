@@ -107,6 +107,8 @@ input "type:touchpad" {
 #
 #
 
+    bindswitch --reload --locked lid:on exec hyprlock
+
 # Moving around:
 #
     # Move your focus around
