@@ -294,6 +294,10 @@ label:focus {
     padding: 0 5px;
 }
 
+#custom-notification {
+  font-family: "NotoSansMono Nerd Font";
+}
+
 #custom-fan {
     padding: 0 5px;
 }

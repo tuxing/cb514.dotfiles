@@ -30,6 +30,9 @@ exec sworkstyle &> /tmp/sworkstyle.log
 # exec systemctl --user start hyprpolkitagent
 exec systemctl --user start plasma-polkit-agent
 exec waybar -c $HOME/.config/waybar/config-sway.jsonc
+#exec wpctl set-volume @DEFAULT_SINK@ 0.5
+exec swaync
+exec swayosd-server
 
 xwayland disable
 
@@ -225,17 +228,57 @@ mode "resize" {
 # Utilities:
 #
     # Special keys to adjust volume via PulseAudio
-    bindsym --locked XF86AudioMute exec pactl set-sink-mute \@DEFAULT_SINK@ toggle
-    bindsym --locked XF86AudioLowerVolume exec pactl set-sink-volume \@DEFAULT_SINK@ -5%
-    bindsym --locked XF86AudioRaiseVolume exec pactl set-sink-volume \@DEFAULT_SINK@ +5%
-    bindsym --locked XF86AudioMicMute exec pactl set-source-mute \@DEFAULT_SOURCE@ toggle
+   #bindsym --locked XF86AudioMute exec pactl set-sink-mute \@DEFAULT_SINK@ toggle
+    #bindsym --locked XF86AudioLowerVolume exec pactl set-sink-volume \@DEFAULT_SINK@ -5%
+    #bindsym --locked XF86AudioRaiseVolume exec pactl set-sink-volume \@DEFAULT_SINK@ +5%
+    #bindsym --locked XF86AudioMicMute exec pactl set-source-mute \@DEFAULT_SOURCE@ toggle
     # Special keys to adjust brightness via brightnessctl
-    bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
-    bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
+    #bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
+    #bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
     # Special key to take a screenshot with grim
     bindsym Print exec grim
 
-#
+
+    #swayosd 
+    # Sink volume raise optionally with --device
+    bindsym XF86AudioRaiseVolume exec swayosd-client --output-volume raise
+    # Sink volume lower optionally with --device
+    bindsym XF86AudioLowerVolume exec  swayosd-client --output-volume lower
+    # Sink volume toggle mute
+    bindsym XF86AudioMute exec swayosd-client --output-volume mute-toggle
+    # Source volume toggle mute
+    bindsym XF86AudioMicMute exec swayosd-client --input-volume mute-toggle
+
+    # Volume raise with custom value
+    #bindsym XF86AudioRaiseVolume exec swayosd-client --output-volume 15
+    # Volume lower with custom value
+    #bindsym XF86AudioLowerVolume exec swayosd-client --output-volume -15
+
+    # Volume raise with max value
+    #bindsym XF86AudioRaiseVolume exec swayosd-client --output-volume raise --max-volume 120
+    #swayosd-client --output-volume=raiseswayosd-client --output-volume=raise    # Volume lower with max value
+    #bindsym XF86AudioLowerVolume exec swayosd-client --output-volume lower --max-volume 120
+
+    # Sink volume raise with custom value optionally with --device
+    #bindsym XF86AudioRaiseVolume exec  swayosd-client --output-volume +10 --device alsa_output.pci-0000_11_00.4.analog-stereo.monitor
+    # Sink volume lower with custom value optionally with --device
+    #bindsym XF86AudioLowerVolume exec  swayosd-client --output-volume -10 --device alsa_output.pci-0000_11_00.4.analog-stereo.monitor
+
+    # Capslock (If you don't want to use the backend)
+    # bindsym --release Caps_Lock exec swayosd-client --caps-lock
+    # Capslock but specific LED name (/sys/class/leds/)
+    #bindsym --release Caps_Lock exec swayosd-client --caps-lock-led input19::capslock
+
+    # Brightness raise
+    bindsym XF86MonBrightnessUp exec swayosd-client --brightness raise
+    # Brightness lower
+    bindsym XF86MonBrightnessDown exec swayosd-client --brightness lower
+
+    # Brightness raise with custom value('+' sign needed)
+    #bindsym XF86MonBrightnessUp  exec swayosd-client --brightness +10
+    # Brightness lower with custom value('-' sign needed)
+    #bindsym XF86MonBrightnessDown exec swayosd-client --brightness -10
+
 #customkeys
 #
    bindsym $mod+g exec google-chrome-stable --password-store=kwallet6
@@ -244,7 +287,7 @@ mode "resize" {
    bindsym $mod+z exec zen-twilight
    bindsym $mod+d exec dolphin
    bindsym $mod+l exec hyprlock
-#  bindsym switch "Lid Switch" exec hyprlock   
+   bindsym $mod+Shift+n exec swaync-client -t -sw   
 
 # Status Bar:
 #

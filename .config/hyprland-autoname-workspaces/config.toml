@@ -14,7 +14,7 @@ client_fullscreen = "[{icon}]{delim}"
 
 [class_active]
 DEFAULT="{icon}"
-"(?i)firefox" = "<span color='orange'> {class}</span>"
+"(?i)firefox" = " "
 
 # [initial_class]
 # "DEFAULT" = " {class}: {title}"
@@ -64,8 +64,8 @@ DEFAULT="{icon}"
 
 [class]
 DEFAULT = ""
-"(?i)firefox" = "<span color='orange'> </span>"
-"(?i)kitty" = ""
+"(?i)firefox" = " "
+"(?i)kitty" = "󰄛"
 "(?i)alacritty" = ""
 bleachbit = ""
 burp-startburp = ""
@@ -78,7 +78,7 @@ darktable = ""
 discord = ""
 dmenu-clipboard = ""
 dmenu-pass = ""
-dolphin = ""
+dolphin = "󱢴"
 element = ""
 fontforge = ""
 gcr-prompter = ""
@@ -141,7 +141,7 @@ wlfreerdp = "󰀄"
 work = ""
 xplr = ""
 nemo = ""
-zen = ""
+zen = "󰚀"
 
 [exclude]
 "" = "^$" # prevent displaying clients with empty class
