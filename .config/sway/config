@@ -34,13 +34,16 @@ exec waybar -c $HOME/.config/waybar/config-sway.jsonc
 exec swaync
 exec swayosd-server
 
+#startup sound for vulume control
+exec mpg123 /home/zen/Music/strangerthingsstart.mp3
+
 xwayland disable
 
 workspace number 2; exec foot
 workspace number 3; exec dolphin
 #workspace number 4; exec google-chrome-stable --password-store=kwallet6
 workspace number 9; exec foot btop
-workspace number 4; exec zen-twilight
+workspace number 4; exec zen-beta
 workspace number 1
 
 ### Output configuration
@@ -284,7 +287,7 @@ mode "resize" {
    bindsym $mod+g exec google-chrome-stable --password-store=kwallet6
    bindsym $mod+c exec chiaki
    bindsym $mod+x exec firefox
-   bindsym $mod+z exec zen-twilight
+   bindsym $mod+z exec zen-beta
    bindsym $mod+d exec dolphin
    bindsym $mod+l exec hyprlock
    bindsym $mod+Shift+n exec swaync-client -t -sw   
