@@ -1,5 +1,6 @@
 
 
+
 # Default config for sway
 #
 # Copy this to ~/.config/sway/config and edit it to your liking.
@@ -281,7 +282,9 @@ mode "resize" {
     #bindsym XF86MonBrightnessUp  exec swayosd-client --brightness +10
     # Brightness lower with custom value('-' sign needed)
     #bindsym XF86MonBrightnessDown exec swayosd-client --brightness -10
-
+    
+   # bindsym XF86PowerDown exec nwg-bar
+    bindcode 124 exec nwg-bar -i 96 -t /home/zen/.config/nwg-bar/sway-nwg-bar.json 
 #customkeys
 #
    bindsym $mod+g exec google-chrome-stable --password-store=kwallet6

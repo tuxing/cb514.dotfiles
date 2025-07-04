@@ -1,0 +1,22 @@
+[
+  {
+    "label": "",
+    "exec": "hyprlock",
+    "icon": "/nix/store/y68lq2w06ncq1irq0kcx4mga7gizz7kx-nwg-bar-0.1.6/share/nwg-bar/images/system-lock-screen.svg"
+  },
+  {
+    "label": "",
+    "exec": "hyprctl dispatch exit",
+    "icon": "/nix/store/y68lq2w06ncq1irq0kcx4mga7gizz7kx-nwg-bar-0.1.6/share/nwg-bar/images/system-log-out.svg"
+  },
+  {
+    "label": "",
+    "exec": "systemctl reboot",
+    "icon": "/nix/store/y68lq2w06ncq1irq0kcx4mga7gizz7kx-nwg-bar-0.1.6/share/nwg-bar/images/system-reboot.svg"
+  },
+  {
+    "label": "",
+    "exec": "systemctl -i poweroff",
+    "icon": "/nix/store/y68lq2w06ncq1irq0kcx4mga7gizz7kx-nwg-bar-0.1.6/share/nwg-bar/images/system-shutdown.svg"
+  }
+]
