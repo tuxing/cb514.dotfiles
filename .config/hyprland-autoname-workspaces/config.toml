@@ -142,6 +142,7 @@ work = ""
 xplr = ""
 nemo = ""
 zen = "󰚀"
+gwenview = "󰂥"
 
 [exclude]
 "" = "^$" # prevent displaying clients with empty class
