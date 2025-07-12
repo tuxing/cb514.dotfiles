@@ -143,6 +143,8 @@ xplr = ""
 nemo = ""
 zen = "󰚀"
 gwenview = "󰂥"
+moonlight = ""
+codium = ""
 
 [exclude]
 "" = "^$" # prevent displaying clients with empty class
