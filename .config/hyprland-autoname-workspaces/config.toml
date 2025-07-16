@@ -145,6 +145,8 @@ zen = "󰚀"
 gwenview = "󰂥"
 moonlight = ""
 codium = ""
+remmina = ""
+nomachine = "󰢹"
 
 [exclude]
 "" = "^$" # prevent displaying clients with empty class
