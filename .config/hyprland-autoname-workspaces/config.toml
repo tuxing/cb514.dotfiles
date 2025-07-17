@@ -146,7 +146,8 @@ gwenview = "󰂥"
 moonlight = ""
 codium = ""
 remmina = ""
-nomachine = "󰢹"
+"NoMachine" = "󰢹"
+"Nxplayer.bin" = "󰢹"
 
 [exclude]
 "" = "^$" # prevent displaying clients with empty class
